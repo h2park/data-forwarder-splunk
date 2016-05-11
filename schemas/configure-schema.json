@@ -2,8 +2,15 @@
   "title": "Configure",
   "type": "object",
   "properties": {
-    "greeting": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "splunkToken": {
       "type": "string"
     }
-  }
+  },
+  "required": ["url", "splunkToken"]
 }

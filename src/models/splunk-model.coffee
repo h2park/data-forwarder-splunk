@@ -5,9 +5,12 @@ class Splunk
 
     options =
       url: url
-      json: message
+      json:
+        event: message
+      headers:
+        Authorization: "Splunk #{splunkToken}"
 
-    options.auth = {username, password} if username? || password?
     request.post options
+    callback()
 
 module.exports = Splunk

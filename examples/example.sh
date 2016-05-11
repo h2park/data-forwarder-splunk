@@ -24,7 +24,7 @@ curl \
 --silent \
 --user $OWNER_DEVICE_UUID:$OWNER_DEVICE_TOKEN \
 -H 'content-type: application/json' \
--d '{"options": "hi"}' \
+-d '{"url": "http://a.dev:8088/services/collector", "splunkToken": "83B9ED3D-47C7-4764-B6C2-D3D96AB28EC6"}' \
 -X POST "$SERVICE_URL/devices" | jq '.' > ./tmp/data-forwarder-config.json
 
 FORWARDER_DEVICE_UUID=$(cat ./tmp/data-forwarder-config.json | jq -r '.uuid')
