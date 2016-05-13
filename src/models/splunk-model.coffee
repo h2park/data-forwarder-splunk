@@ -1,7 +1,7 @@
 request = require 'request'
 class Splunk
-  onMessage: ({message, device}, callback) =>
-    {url, splunkToken} = device
+  onMessage: ({message, forwarderConfig}, callback) =>
+    {url, splunkToken} = forwarderConfig
 
     options =
       url: url
