@@ -5,12 +5,23 @@
     "name": {
       "type": "string"
     },
-    "url": {
-      "type": "string"
-    },
-    "splunkToken": {
-      "type": "string"
+    "forwarderConfig": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "splunkToken": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "splunkToken"
+      ]
     }
   },
-  "required": ["url", "splunkToken"]
+  "required": [
+    "forwarderConfig"
+  ]
 }
