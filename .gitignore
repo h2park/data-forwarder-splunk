@@ -29,3 +29,5 @@ tmp
 meshblu.json
 octoblu-dev
 production
+.npmrc-dev
+*.dockerfile-dev
