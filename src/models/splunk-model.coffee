@@ -5,6 +5,7 @@ class Splunk
 
     options =
       url: url
+      rejectUnauthorized: false
       json:
         event: message
       headers:
