@@ -11,7 +11,7 @@ class Splunk
       headers:
         Authorization: "Splunk #{splunkToken}"
 
-    request.post options
+    request.post options, =>
     callback()
 
 module.exports = Splunk

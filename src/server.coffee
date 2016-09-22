@@ -24,13 +24,12 @@ class Server
     app.use expressVersion(format: '{"version": "%s"}')
     app.use morgan 'dev', immediate: false unless @disableLogging
     app.use cors()
+    app.options '*', cors()
     app.use errorHandler()
     app.use cookieParser()
     app.use sendError()
     app.use bodyParser.urlencoded limit: '50mb', extended : true
     app.use bodyParser.json limit : '50mb'
-
-    app.options '*', cors()
 
     imageUrl   = 'https://s3-us-west-2.amazonaws.com/octoblu-icons/forwarder/splunk.svg'
     deviceType = 'forwarder:splunk'
